@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int nim;
+    float nilai_akhir, nilai_tes, nilai_uts, nilai_uas, nilai_tugas;
+    char indeks;
+
+    cout <<"NIM : ";
+    cin >> nim;
+    cout <<"Masukkan Nilai Tes : ";
+    cin >> nilai_tes;
+    cout <<"Masukkan Nilai UTS : ";
+    cin >> nilai_uts;
+    cout <<"Masukkan Nilai UAS : ";
+    cin >> nilai_uas;
+    cout <<"Masukkan Nilai Tugas : ";
+    cin >> nilai_tugas;
+
+    nilai_akhir=((0.2*nilai_tes)+(0.3*nilai_uts)+(0.3*nilai_uas)+(0.2*nilai_tugas));
+
+    if (nilai_akhir<=50) {
+        indeks = 'D';
+    } else if ((nilai_akhir<=70) && (nilai_akhir>50)){
+        indeks = 'C';
+    } else if ((nilai_akhir<=80) && (nilai_akhir>70)){
+        indeks = 'B';
+    } else {
+        indeks = 'A';
+    }
+     cout <<"Nilai indeks dari nilai "<<nilai_akhir<<" adalah "<<indeks;
+    return 0;
+}
+
